@@ -20,7 +20,8 @@
   <div class="px-4 py-4 sm:px-6">
     <ul>
         <li>id: {{ $response['user']['id'] }}</li>
-        <li>name: {{ $response['user']['name'] }}</li>
+        <li>first_name: {{ $response['user']['first_name'] }}</li>
+        <li>last_name: {{ $response['user']['last_name'] }}</li>
         <li>email: {{ $response['user']['email'] }}</li>
         <li>profile: {{ $response['user']['profile_picture'] }}</li>
         <li>status: {{ $response['user']['status'] }}</li>

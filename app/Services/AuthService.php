@@ -22,7 +22,8 @@ class AuthService {
 
         if (!$user){
             $normalized = [
-                'name' => $socialiteUser->name,
+                'first_name' => $socialiteUser->user['given_name'],
+                'last_name' => $socialiteUser->user['family_name'],
                 'email' => $socialiteUser->email,
                 'google_id'=> $socialiteUser->id,
                 'profile_picture'=> $socialiteUser->avatar,
