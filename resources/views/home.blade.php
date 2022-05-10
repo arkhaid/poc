@@ -2,8 +2,14 @@
  
 @section('content')
 <div class="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
+  @if(session()->has('token'))
   <div class="px-4 py-5 sm:px-6">
-    Wheather in {{ $response['weather']['name'] }}
+    Your API Token: {{ session('token') }} 
+    <br><span style="color: red">(ONLY SHOW UP ONCE, KEEP IN SECRET)</span>
+  </div>
+  @endif
+  <div class="px-4 py-5 sm:px-6">
+    <h2 class="text-xl">Wheather in {{ $response['weather']['name'] }}</h2>
   </div>
   <div class="px-4 py-5 sm:p-6">
     <ul>
@@ -15,10 +21,7 @@
     </ul>
   </div>
   <div class="px-4 py-5 sm:px-6">
-    Your API Token: {{ session('token') }} <span style="color: red">(ONLY SHOW ONCE, KEEP IN SECRET)</span>
-  </div>
-  <div class="px-4 py-5 sm:px-6">
-    User Data
+    <h2 class="text-xl">User Data</h2>
   </div>
   <div class="px-4 py-4 sm:px-6">
     <ul>

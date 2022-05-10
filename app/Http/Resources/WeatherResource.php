@@ -16,7 +16,9 @@ class WeatherResource extends JsonResource
         return [
             'user' => [
                 'id' => $this['user']['id'],
-                'name' => $this['user']['name'],
+                'first_name' => $this['user']['first_name'],
+                'last_name' => $this['user']['last_name'],
+                'profile' => $this['user']['profile_picture'],
                 'email' => $this['user']['email'],
                 'created_at' => $this['user']['created_at'],
                 'updated_at' => $this['user']['updated_at'],
