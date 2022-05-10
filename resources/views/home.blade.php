@@ -14,8 +14,19 @@
         <li>Temp max: {{ $response['weather']['main']['temp_max'] }}</li>
     </ul>
   </div>
+  <div class="px-4 py-5 sm:px-6">
+    User Data
+  </div>
   <div class="px-4 py-4 sm:px-6">
-    API key
+    <ul>
+        <li>id: {{ $response['user']['id'] }}</li>
+        <li>name: {{ $response['user']['name'] }}</li>
+        <li>email: {{ $response['user']['email'] }}</li>
+        <li>profile: {{ $response['user']['profile_picture'] }}</li>
+        <li>status: {{ $response['user']['status'] }}</li>
+        <li>created_at: {{ $response['user']['created_at'] }}</li>
+        <li>updated_at: {{ $response['user']['updated_at'] }}</li>
+    </ul>
   </div>
 </div>
 @endsection
