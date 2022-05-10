@@ -36,4 +36,6 @@ return [
         'redirect' => env('GOOGLE_REDIRECT'),
     ],
 
+    'openweather_api_key' => env('OPEN_WEATHER_KEY')
+
 ];
