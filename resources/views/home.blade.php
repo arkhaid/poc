@@ -15,6 +15,9 @@
     </ul>
   </div>
   <div class="px-4 py-5 sm:px-6">
+    Your API Token: {{ session('token') }} <span style="color: red">(ONLY SHOW ONCE, KEEP IN SECRET)</span>
+  </div>
+  <div class="px-4 py-5 sm:px-6">
     User Data
   </div>
   <div class="px-4 py-4 sm:px-6">

@@ -23,9 +23,10 @@ class WheatherController extends Controller
     public function index(Request $request){
 
         $location = new IpLocationAdapter($request->ip());
+        $user = Auth::user();
 
         $response = [
-          'user' => Auth::user(),
+          'user' => $user,
           'weather' => $this->weatherService->getWeather($location)
         ];
 

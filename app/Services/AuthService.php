@@ -33,5 +33,11 @@ class AuthService {
         }
 
         Auth::login($user);
+
+        $user->tokens()->delete();
+        $token = $user->createToken('api');
+
+        return $token->plainTextToken;
+        
     }
 }

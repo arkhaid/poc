@@ -24,8 +24,9 @@ class SocialController extends Controller
     public function callback()
     {
         $user = Socialite::driver('google')->stateless()->user();
-        $this->authService->authorizeWithGoogle($user);
+    
+        $token = $this->authService->authorizeWithGoogle($user);
 
-        return redirect('/home');
+        return redirect('/home')->with('token',  $token);
     }
 }
